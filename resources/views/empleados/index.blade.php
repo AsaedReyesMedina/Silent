@@ -5,11 +5,52 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                
+    <div class="container-fluid"><br> 
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-header">
+                      Bienvenido
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Información de empleados</h5>
+                      <p class="card-text">Mira el total de empleados registradas aqui.</p>
+                      <a href="#" class="btn btn-primary">Registra una empleado</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-9">
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>email</th>
+                            <th>logo</th>
+                            <th>website</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          
+                        @foreach ($empleadoss as $empleado)
+                            <tr>
+                            <td> {{$empleado->nombre}} </td>
+                            <td> {{$empleado->email}} </td>
+                            <td> {{$empleado->logo}} </td>
+                            <td> {{$empleado->website}} </td>
+                        </tr>
+                        @endforeach
+                        
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>email</th>
+                            <th>logo</th>
+                            <th>website</th>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </div>
-    </div>
+    </div><br>
 </x-app-layout>
