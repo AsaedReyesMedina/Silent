@@ -24,9 +24,11 @@
                     <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>email</th>
-                            <th>logo</th>
-                            <th>website</th>
+                            <th>Email</th>
+                            <th>Logo</th>
+                            <th>Website</th>
+                            <th>Actualizar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +38,8 @@
                             <td> {{$compania->email}} </td>
                             <td> {{$compania->logo}} </td>
                             <td> {{$compania->website}} </td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         @endforeach
                         
@@ -46,6 +50,8 @@
                             <th>email</th>
                             <th>logo</th>
                             <th>website</th>
+                            <th>Actualizar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </tfoot>
                 </table>

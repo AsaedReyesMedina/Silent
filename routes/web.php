@@ -30,10 +30,30 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/companias',[CompaniasCont
 Route::middleware(['auth:sanctum', 'verified'])->get('/companias/create',[CompaniasController::class,'create']
 )->name('companiascreate');
 
+Route::middleware(['auth:sanctum', 'verified'])->post('/companias',[CompaniasController::class,'store']
+)->name('companias.store');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('/companias/{compania}/edit',[CompaniasController::class,'edit']
+)->name('companias.edit');
+
+Route::middleware(['auth:sanctum', 'verified'])->put('/companias/{compania}',[CompaniasController::class,'update']
+)->name('companias.update');
+
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/empleados',[EmpleadosController::class,'index']
 )->name('empleados');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/empleados/create',[EmpleadosController::class,'create']
 )->name('empleadoscreate');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('/empleado',[EmpleadosController::class,'store']
+)->name('empleados.store');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('/empleado/{empleado}/edit',[EmpleadosController::class,'edit']
+)->name('empleados.edit');
+
+Route::middleware(['auth:sanctum', 'verified'])->put('/empleados/{empleado}',[EmpleadosController::class,'update']
+)->name('empleados.update');
 
 

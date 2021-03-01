@@ -31,7 +31,7 @@
                     </thead>
                     <tbody>
                           
-                        @foreach ($empleadoss as $empleado)
+                        @foreach ($empleados as $empleado)
                             <tr>
                             <td> {{$empleado->nombre}} </td>
                             <td> {{$empleado->email}} </td>
