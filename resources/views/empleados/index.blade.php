@@ -15,7 +15,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Información de empleados</h5>
                       <p class="card-text">Mira el total de empleados registradas aqui.</p>
-                      <a href="#" class="btn btn-primary">Registra una empleado</a>
+                      <a href="{{ route('empleados.create') }}"  class="btn btn-primary">Registra una empleado</a>
                     </div>
                   </div>
             </div>

@@ -22,13 +22,13 @@
               <div class="collapse navbar-collapse" id="navbarTogglerDemo03"><br>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link  texto-normal" aria-current="page" href="#">Home</a>
+                    <a class="nav-link  texto-normal" aria-current="page" href="{{ route('dashboard') }}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link  texto-normal" aria-current="page" href="#">Compañias</a>
+                    <a class="nav-link  texto-normal" aria-current="page" href="{{ route('companias') }}" >Compañias</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link  texto-normal" aria-current="page" href="#">Empleados</a>
+                    <a class="nav-link  texto-normal" aria-current="page" href="{{ route('empleados') }}">Empleados</a>
                   </li>
                 </ul>
               </div>

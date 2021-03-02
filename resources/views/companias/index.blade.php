@@ -15,7 +15,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Información de compañias</h5>
                       <p class="card-text">Mira el total de compañias registradas aqui.</p>
-                      <a href="#" class="btn btn-primary">Registra una compañia</a>
+                      <a href="{{ route('companias.create') }}" class="btn btn-primary">Registra una compañia</a>
                     </div>
                   </div>
             </div>
