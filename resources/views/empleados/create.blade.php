@@ -6,7 +6,8 @@
             <div class="col-lg-12">
                 <div class="card text-white borde sombra" style="background-color: #080808;">
                     <div class="card-body">
-                        <form class="row g-3">
+                        <form action=" {{route('empleados.store')}} " method="POST" class="row g-3">
+                          @csrf
                             <div class="col-md-4">
                               <label for="validationDefault01" class="form-label">Nombre</label>
                               <input type="text" class="form-control" id="validationDefault01" name="nombre" required>
@@ -28,14 +29,17 @@
                             <div class="col-md-3">
                               <label for="validationDefault04" class="form-label">Compañia</label>
                               <select class="form-select" name="compania" id="validationDefault04" required>
-                                <option selected disabled value="">Choose...</option>
-                                <option>...</option>
+                                <option selected disabled value="">Sleccionar</option>
+                                @foreach ($companias as $compania)
+                                <option value=" {{$compania->id}}"> {{$compania->nombre}} </option>
+                                @endforeach
+                                
                               </select>
                             </div>
                             <div class="col-md-3">
                               <label for="validationDefault05" class="form-label">Genero</label>
-                              <select class="form-select" id="validationDefault05" required>
-                                <option selected disabled value="">Choose...</option>
+                              <select class="form-select" name="genero" id="validationDefault05" required>
+                                <option selected disabled value="">Seleccionar</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
                               </select>

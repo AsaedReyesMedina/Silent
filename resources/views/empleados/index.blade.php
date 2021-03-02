@@ -24,19 +24,27 @@
                     <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>email</th>
-                            <th>logo</th>
-                            <th>website</th>
+                            <th>Apellidos</th>
+                            <th>Emailmail</th>
+                            <th>Telefono</th>
+                            <th>Genero</th>
+                            <th>Compañia</th>
+                            <th>Actualizar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
                           
                         @foreach ($empleados as $empleado)
                             <tr>
-                            <td> {{$empleado->nombre}} </td>
+                            <td> {{$empleado->primer_nombre}} </td>
+                            <td> {{$empleado->last_name}} </td>
                             <td> {{$empleado->email}} </td>
-                            <td> {{$empleado->logo}} </td>
-                            <td> {{$empleado->website}} </td>
+                            <td> {{$empleado->telefono}} </td>
+                            <td> {{$empleado->genero}} </td>
+                            <td> {{$empleado->compania_id}} </td>
+                            <td><a class="btn btn-primary" href=" {{route('empleados.edit',$empleado)}} " role="button">Actualizar</a></td>
+                            <td></td>
                         </tr>
                         @endforeach
                         
@@ -44,9 +52,13 @@
                     <tfoot>
                         <tr>
                             <th>Nombre</th>
-                            <th>email</th>
-                            <th>logo</th>
-                            <th>website</th>
+                            <th>Apellidos</th>
+                            <th>Emailmail</th>
+                            <th>Telefono</th>
+                            <th>Genero</th>
+                            <th>Compañia</th>
+                            <th>Actualizar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </tfoot>
                 </table>

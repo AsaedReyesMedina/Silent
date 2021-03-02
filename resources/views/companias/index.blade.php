@@ -38,7 +38,7 @@
                             <td> {{$compania->email}} </td>
                             <td> {{$compania->logo}} </td>
                             <td> {{$compania->website}} </td>
-                            <td></td>
+                            <td><a class="btn btn-primary" href=" {{route('companias.edit',$compania)}} " role="button">Actualizar</a></td>
                             <td></td>
                         </tr>
                         @endforeach

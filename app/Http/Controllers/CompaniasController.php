@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\compania;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreCompania;
 
 class CompaniasController extends Controller
 {
@@ -15,7 +16,7 @@ class CompaniasController extends Controller
     public function create(){
         return view('companias.create');
     }
-    public function store(Request $request){
+    public function store(StoreCompania $request){
         $compania = new compania();
 
         $compania->nombre=$request->nombre;
