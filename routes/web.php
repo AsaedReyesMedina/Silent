@@ -39,6 +39,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/companias/{compania}/edit
 Route::middleware(['auth:sanctum', 'verified'])->put('/companias/{compania}',[CompaniasController::class,'update']
 )->name('companias.update');
 
+Route::middleware(['auth:sanctum', 'verified'])->delete('/companias/{compania}',[CompaniasController::class,'destroy']
+)->name('companias.destroy');
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/empleados',[EmpleadosController::class,'index']
@@ -55,5 +58,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/empleado/{empleado}/edit'
 
 Route::middleware(['auth:sanctum', 'verified'])->put('/empleados/{empleado}',[EmpleadosController::class,'update']
 )->name('empleados.update');
+Route::middleware(['auth:sanctum', 'verified'])->delete('/empleados/{empleado}',[EmpleadosController::class,'destroy']
+)->name('empleados.destroy');
 
 

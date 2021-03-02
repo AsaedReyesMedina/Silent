@@ -38,4 +38,9 @@ class CompaniasController extends Controller
         $compania->save();
         return redirect()->route('companias');
     }
+
+    public function destroy(compania $compania){
+        $compania->delete();
+        return redirect()->route('companias');
+    }
 }

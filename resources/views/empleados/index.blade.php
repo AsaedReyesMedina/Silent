@@ -44,7 +44,11 @@
                             <td> {{$empleado->genero}} </td>
                             <td> {{$empleado->compania_id}} </td>
                             <td><a class="btn btn-primary" href=" {{route('empleados.edit',$empleado)}} " role="button">Actualizar</a></td>
-                            <td></td>
+                            <td><form action=" {{route('empleados.destroy',$empleado)}} " method="POST">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form></td>
                         </tr>
                         @endforeach
                         

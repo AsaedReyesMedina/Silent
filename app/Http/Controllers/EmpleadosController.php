@@ -48,4 +48,8 @@ class EmpleadosController extends Controller
         $empleado->save();
         return redirect()->route('empleados');
     }
+    public function destroy(empleado $empleado){
+        $empleado->delete();
+        return redirect()->route('empleados');
+    }
 }

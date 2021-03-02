@@ -39,7 +39,11 @@
                             <td> {{$compania->logo}} </td>
                             <td> {{$compania->website}} </td>
                             <td><a class="btn btn-primary" href=" {{route('companias.edit',$compania)}} " role="button">Actualizar</a></td>
-                            <td></td>
+                            <td><form action=" {{route('companias.destroy',$compania)}} " method="POST">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form></td>
                         </tr>
                         @endforeach
                         
